@@ -1,10 +1,11 @@
 import React from 'react';
+import Content from './Content/Content.jsx';
 
-export default class Content extends React.Component {
+export default class Ap extends React.Component {
     render() {
         return (
             <div>
-                Coucou
+                <Content />
             </div>
         )
     }
