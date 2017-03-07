@@ -12,6 +12,28 @@ export default class Content extends React.Component {
         }
     }
 
+    less(card) {
+
+        let array = this.state.cards;
+        let empty = false;
+
+        array.map((element, index, arr) => {
+                if(element.title == card){
+                    
+                    if( arr[index].qte - 1 == 0) {
+                        empty = true;
+                    }
+                    arr[index].qte = arr[index].qte - 1;
+                    this.setState({
+                        cards: arr
+                    });
+                }
+             });
+             if(empty==true){
+                 this.remove(card);
+             }
+    }
+
     remove(card){
         let array = this.state.cards;
 
@@ -56,7 +78,8 @@ export default class Content extends React.Component {
             <div>
                 <Basket basket={this.state.cards}
                         remove={this.remove.bind(this)}
-                        addCart={this.addCart.bind(this)}/>
+                        addCart={this.addCart.bind(this)}
+                        less={this.less.bind(this)}/>
                 {
                     data.map((bike, index)=>{
                         return (

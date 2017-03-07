@@ -3,6 +3,10 @@ import BasketCards from './BasketCards.jsx';
 
 export default class Basket extends React.Component {
 
+    less(card){
+        this.props.less(card);
+    }
+
     add(card){
         this.props.addCart(card);
     }
@@ -21,7 +25,8 @@ export default class Basket extends React.Component {
                                          title={card.title} 
                                          qte={card.qte}
                                          removeCard={this.removeCard.bind(this)}
-                                         add={this.add.bind(this)}/>
+                                         add={this.add.bind(this)}
+                                         less={this.less.bind(this)}/>
                         )
                     })
                 }
