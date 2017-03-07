@@ -80,17 +80,19 @@ export default class Content extends React.Component {
                         remove={this.remove.bind(this)}
                         addCart={this.addCart.bind(this)}
                         less={this.less.bind(this)}/>
-                {
-                    data.map((bike, index)=>{
-                        return (
-                            <CreateCards key={index} 
-                                         title={bike.title} 
-                                         img={bike.img} 
-                                         price={bike.price} 
-                                         addCart={this.addCart.bind(this)} />
-                        )
-                    })
-                }
+                <div id='bikes'>
+                    {
+                        data.map((bike, index)=>{
+                            return (
+                                    <CreateCards key={index} 
+                                                title={bike.title} 
+                                                img={bike.img} 
+                                                price={bike.price} 
+                                                addCart={this.addCart.bind(this)} />
+                            )
+                        })
+                    }
+                </div>
             </div>
         )
     }

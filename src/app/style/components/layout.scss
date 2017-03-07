@@ -1,3 +1,36 @@
+header {
+    padding-left: 6rem;
+    padding-right: 4rem;
+    #logo {
+        width: 10rem;
+    }
+    #logo, nav {
+        display: inline-block;
+    }
+    nav {
+        position: absolute;
+        margin-left: 25rem;
+        margin-top: 4rem;
+    
+        li {
+            padding-left: 3rem;
+            display: inline-block;
+            padding-right: 3rem;
+            margin-right: 1rem;
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+#bikes {
+    width: 70%;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 .card {
     display: inline-block;
     margin-right: 5rem;
